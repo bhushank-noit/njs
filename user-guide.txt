@@ -34,4 +34,15 @@
 3) How function works 
     refer code in index.js 
     for x, it will create a seperate memory allocation for each next phase of the execution/call stack
+    
+4) shortest JS program
+    blank index.js, still it will create global execution context
+    check on console 
+        window
+        this
+        this === window 
 
+    JS engine(eg. chromian) will create windows object in broswer;
+    JS is loosely coupled variable system
+    var a = undefined // wrong practice, avoid it
+    

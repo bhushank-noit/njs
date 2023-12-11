@@ -23,3 +23,10 @@
     first phase of the execution is global phase and other execution context is pushed and poped it according to need
 
     check in broswer source tab;
+
+2) Hoisting
+
+    It will give the access to the variables before initialization
+
+    if function is defined as variable then memory will be allocated to it but it will give undefined error
+    first executionContext

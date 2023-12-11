@@ -46,3 +46,8 @@
     JS is loosely coupled variable system
     var a = undefined // wrong practice, avoid it
     
+5) Scope chain and lexical environment
+
+    code in index.js will print 15 because scope chain and lexical environment 
+    lexical environment is current executionContext + parent executionContext. it has refernace of it's parent lexical environment 
+    global executionContext -> parent refernace is null;

@@ -29,4 +29,9 @@
     It will give the access to the variables before initialization
 
     if function is defined as variable then memory will be allocated to it but it will give undefined error
-    first executionContext
+    first executionContext 
+
+3) How function works 
+    refer code in index.js 
+    for x, it will create a seperate memory allocation for each next phase of the execution/call stack
+

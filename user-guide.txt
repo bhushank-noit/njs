@@ -51,3 +51,25 @@
     code in index.js will print 15 because scope chain and lexical environment 
     lexical environment is current executionContext + parent executionContext. it has refernace of it's parent lexical environment 
     global executionContext -> parent refernace is null;
+
+6) let and scope and error
+    let can be hoisted like var but memory allocation to it on other than global executionContext
+    let vaiables can be access after initialization of it 
+    Temporal deadzone = time between let variable access and initialization of let variable
+
+    var can be attached to window(window.varA) but let can't (window.letA)
+    in global executionContext this points to window 
+    in local executionContext this points to current executionContext 
+
+    let a = 5;
+    let a = 7; // it will give syntax error already defined stops further execution
+
+    const is same as let variable Hoisting
+
+    const a; // it will give syntax error
+    const c = 1000;
+    c = 10 // it will give type error 
+
+    to avoid Temporal deadzone, please initialize all let variable on top of all 
+
+    let and const are hoisted with Temporal deadzone;

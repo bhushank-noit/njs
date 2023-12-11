@@ -1,8 +1,2 @@
-function a() {
-  c();
-  function c() {
-    console.log(b);
-  }
-}
-var b = 15;
-a();
+// console.log(a); // index.js:1 Uncaught ReferenceError: Cannot access 'a' before initialization
+let a = 10;

@@ -1,0 +1,25 @@
+1) JavaScript execution context
+
+    consider the following program 
+
+    var a = 2;
+    function sqaure(num){
+        var ans = num * num;
+        return ans;
+    }
+    var squre2 = sqaure(a);
+    var squre4 = sqaure(4);
+
+    executionContext has two parts that is
+    memory and code 
+    in first phase of the execution a, sqaure2 and squre4 memory allocated with undefined values
+    and squre memory allocated with function code 
+
+    in second phase of the execution
+    for functtion squre execution of square2 create separate execution context and ans with undefined values
+    same for squre4  
+
+    this is called as callstack/machine stack etc .
+    first phase of the execution is global phase and other execution context is pushed and poped it according to need
+
+    check in broswer source tab;

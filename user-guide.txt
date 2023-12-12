@@ -73,3 +73,14 @@
     to avoid Temporal deadzone, please initialize all let variable on top of all 
 
     let and const are hoisted with Temporal deadzone;
+
+7) Block scope and shadowing
+     block is group of multiple statements used to call in single statements
+     {
+        var a = 1; // it hoisted on global executionContext
+        let b = 2; // it hoisted on block executionContext
+        const c = 3;  // it hoisted on block executionContext
+     } 
+     let and const can't access  outside the block scope because it is hoisted in block scope
+     var can access outside the block scope because it is hoisted in global 
+     

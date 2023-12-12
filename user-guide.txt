@@ -97,3 +97,5 @@
         in async to maintain state 
         settimeout
         iteration
+
+9) closure with set timeout 

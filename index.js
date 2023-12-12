@@ -1,36 +1,39 @@
 /* function a() {
-  var b = 7;
-  return function c() {
-    console.log(b);
-  };
-}
-var d = a(); // a execution context gone after it
-console.log(d);
-d(); // this will print because function c/d returns with closure;
-
-function x() {
-  var y = 7;
-  function z() {
-    console.log(y);
+  for (var i = 1; i <= 5; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, i * 1000);
   }
-  y = 25;
-  return z;
+  console.log(
+    "this will print 6 every time because all settime out referes to same i in memory"
+  );
 }
-var e = x(); // a execution context gone after it
-console.log(e);
-e(); // this will print 25 because y points/refer to memory not to 7/25 */
+a(); */
 
-function a() {
-  let b = 17;
-  function c() {
-    function d() {
-      function e() {
-        console.log(b);
-      }
-      e();
+/* function b() {
+  for (let i = 1; i <= 5; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, i * 1000);
+  }
+  console.log(
+    "this will print 1,2 .. different every time because all settime out referes to different i in memory because i is blockscope here"
+  );
+}
+b(); */
+
+function c() {
+  for (let i = 1; i <= 5; i++) {
+    function print(x) {
+      setTimeout(() => {
+        console.log(x);
+      }, x * 1000);
     }
-    d();
+    print(i);
   }
-  c();
+
+  console.log(
+    "to achive output like b() then use function because var for every function different variable created"
+  );
 }
-a();
+c();

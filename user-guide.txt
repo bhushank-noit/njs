@@ -83,4 +83,17 @@
      } 
      let and const can't access  outside the block scope because it is hoisted in block scope
      var can access outside the block scope because it is hoisted in global 
-     
+
+8) closure  
+
+    function along with lexical environment forms closure
+    closure uses parents closure and so on. 
+    it is not garbage 
+    used in 
+        Module design pattern
+        curring
+        memoize
+        once 
+        in async to maintain state 
+        settimeout
+        iteration

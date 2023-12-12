@@ -1,47 +1,36 @@
-/* {
-  var a = 1;
-  let b = 2;
-  const c = 3;
-  console.log("{}", a, b, c);
-} */
-
-// var a = 1;
-// var b = 2;
-// {
-//   var a = 3; // shadows above a and b because it refers in global execution context
-//   var b = 4; //
-//   console.log("{13}", a, b);
-// }
-// console.log("15", a, b);
-
-/* let a = 1;
-const b = 2;
-{
-  let a = 3; // const and let will print different values for each block scope bcoz separete memory for each block scope allocation
-  const b = 4; //
-  console.log("{22}", a, b);
+/* function a() {
+  var b = 7;
+  return function c() {
+    console.log(b);
+  };
 }
-console.log("24", a, b); */
+var d = a(); // a execution context gone after it
+console.log(d);
+d(); // this will print because function c/d returns with closure;
 
-/* let a = 1;
-{
-  var a = 2; // gives error because it reverse shadowing is not possible and same for const Uncaught SyntaxError: Identifier 'a' has already been declared (at index.js:28:7) this will be possible in function scope
-  console.log("{29}", a);
-} */
-
-// var a = 1;
-// {
-//   let a = 2; // this shadowing is possible
-//   console.log("{35}", a);
-// }
-
-/* let x = 1;
-function y() {
-  var x = 2; // this shadowing is possible
-  console.log("41", x);
+function x() {
+  var y = 7;
+  function z() {
+    console.log(y);
+  }
+  y = 25;
+  return z;
 }
-y(); */
+var e = x(); // a execution context gone after it
+console.log(e);
+e(); // this will print 25 because y points/refer to memory not to 7/25 */
 
-// block scope follows lexical environment
-
-// scope rule for function works same for arrow functions
+function a() {
+  let b = 17;
+  function c() {
+    function d() {
+      function e() {
+        console.log(b);
+      }
+      e();
+    }
+    d();
+  }
+  c();
+}
+a();

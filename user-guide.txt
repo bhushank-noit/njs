@@ -99,3 +99,11 @@
         iteration
 
 9) closure with set timeout 
+
+10) function
+        statement declaration
+        expression 
+        anonymous function
+        first class function
+        parameter vs argument
+        

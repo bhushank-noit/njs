@@ -83,6 +83,7 @@
      } 
      let and const can't access  outside the block scope because it is hoisted in block scope
      var can access outside the block scope because it is hoisted in global 
+     var are function scope means var a in global scope and var a in function scope are different hoisted
 
 8) closure  
 
@@ -107,3 +108,10 @@
         first class function
         parameter vs argument
         
+11) Callback function 
+    Callback function is passing function as argument and parameter;
+    JavaScript is synchronous and single threaded
+
+    Callback function with firstclass function allows us to asynchronous task in JavaScript
+
+    Need to remove eventListner for garbage collection because it uses memory

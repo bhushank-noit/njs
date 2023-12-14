@@ -1,26 +1,23 @@
-/* setTimeout(function () {
-  console.log("timer");
-}, 5000);
-function x(y) {
-  console.log("x called");
-  y();
+const arr = [1, 4, 3, 8, 23, 5];
+
+function double(x) {
+  return x * 2;
 }
-x(function y() {
-  console.log("y called");
+
+let o1 = arr.map(double);
+let o2 = arr.map(function tripple(x) {
+  return x * 3;
 });
- */
+let o3 = arr.map((x) => x.toString(2)); // if single line return only use this
+console.log(o1, o2, o3);
 
-/* document.getElementById("clickMe").addEventListener("click", function xyz() {
-  console.log("btn clicked");
-});
- */
-
-// use closure with count get for clicked
-
-function click() {
-  let count = 1;
-  document.getElementById("clickMe").addEventListener("click", function xyz() {
-    console.log("btn clicked ", count++);
-  });
+function isODD(x) {
+  return x % 2;
 }
-click();
+function isEven(x) {
+  return x % 2 === 0;
+}
+
+let o4 = arr.filter(isODD);
+let o5 = arr.filter(isEven);
+console.log(o4, o5);

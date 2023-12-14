@@ -115,3 +115,11 @@
     Callback function with firstclass function allows us to asynchronous task in JavaScript
 
     Need to remove eventListner for garbage collection because it uses memory
+    higher order functions -> using function as argument or parameter
+
+12) map filter reduce 
+    map
+        -> it used when transform whole array in to new variable
+
+    filter 
+        -> it used filter array element on basis of the condition to new variable

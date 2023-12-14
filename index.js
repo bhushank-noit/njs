@@ -21,3 +21,17 @@ function isEven(x) {
 let o4 = arr.filter(isODD);
 let o5 = arr.filter(isEven);
 console.log(o4, o5);
+
+const sum = arr.reduce(function (sum, element) {
+  sum += element;
+  return sum;
+}, 0); // 0 is sum's initial value
+
+const max = arr.reduce(function (max, element) {
+  if (element > max) {
+    max = element;
+  }
+  return max;
+}, 0); // 0 is max's initial value
+
+console.log(sum, max);

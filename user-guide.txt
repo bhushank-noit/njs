@@ -123,3 +123,12 @@
 
     filter 
         -> it used filter array element on basis of the condition to new variable
+
+    reduce
+        -> iterate all array elements and return a single value upon functionality
+
+
+    make array of object {fnm,lnm,age}
+    1) using map get array of object with full name
+    2) using reduce get count of each age
+    3) using chaining get fnm of age < 30
